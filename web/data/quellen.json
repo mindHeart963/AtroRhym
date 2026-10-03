@@ -1,0 +1,14 @@
+{
+ "werke": [
+  {"titel":"Anthroposophischer Seelenkalender 1912/13","ga":"GA 40","text":"Die 52 Wochensprüche, die Grundlage der Jahresansicht. Die App zeigt die Handschrift-Fassung."},
+  {"titel":"Seelenübungen I","ga":"GA 267","text":"Enthält die Nebenübungen, die Tage-der-Woche-Übungen und die Monatstugenden."},
+  {"titel":"Die Geheimwissenschaft im Umriß","ga":"GA 13","text":"Quelle des Abschnitts über die Rückschau."},
+  {"titel":"Wie erlangt man Erkenntnisse der höheren Welten?","ga":"GA 10","text":"Grundschrift zum inneren Übungsweg, die Nebenübungen werden dort ausführlich besprochen."},
+  {"titel":"Theosophie","ga":"GA 9","text":"Grundlegende Darstellung von Wesen und Bestimmung des Menschen."},
+  {"titel":"Die Philosophie der Freiheit","ga":"GA 4","text":"Steiners philosophisches Hauptwerk."}
+ ],
+ "seiten": [
+  {"titel":"Anthroposophischer Seelenkalender","url":"https://anthroposophischer-seelenkalender.de/","text":"Quelle der Sprüche in der Handschrift-Fassung, mit Anmerkungen zu den Abweichungen."},
+  {"titel":"Rudolf Steiner Archiv","url":"https://rsarchive.org/","text":"Texte im Original und in Übersetzungen."}
+ ]
+}

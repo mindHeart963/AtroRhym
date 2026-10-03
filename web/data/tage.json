@@ -1,0 +1,43 @@
+{
+ "quelle": "Rudolf Steiner, Übungen für die Tage der Woche (Seelenübungen, GA 267)",
+ "einleitung": [
+  "Der Mensch muß auf gewisse Seelenvorgänge Aufmerksamkeit und Sorgfalt verwenden, die er gewöhnlich sorglos und unaufmerksam ausführt. Es gibt acht solche Vorgänge.",
+  "Es ist natürlich am besten, auf einmal nur eine Übung vorzunehmen, zum Beispiel während acht oder vierzehn Tagen, dann die zweite usw., dann wieder von vorne anfangen. Übung acht kann indessen am besten täglich gemacht werden. Man erreicht dann nach und nach richtige Selbsterkenntnis und sieht auch, welche Fortschritte man gemacht hat.",
+  "Später kann dann vielleicht - mit Samstag beginnend - täglich eine Übung vorgenommen werden neben der achten, zirka fünf Minuten dauernden, so daß dann jeweils auf denselben Tag die nämliche Übung fällt. Also Samstags die Gedankenübung, Sonntags die Entschlüsse, Montags das Reden, Dienstags das Handeln, Mittwochs die Taten usw."
+ ],
+ "tage": [
+  {"id":"samstag","wochentag":6,"name":"Samstag","planet":"Saturn","zeichen":"♄","metall":"Blei","getreide":"Mais","vokal":"U","farbe":"#2f5aa8","thema":"Gedanken",
+   "text":["Auf seine Vorstellungen (Gedanken) achten. Nur bedeutsame Gedanken denken. Nach und nach lernen, in seinen Gedanken das Wesentliche vom Unwesentlichen, das Ewige vom Vergänglichen, die Wahrheit von der bloßen Meinung zu scheiden.","Beim Zuhören der Reden der Mitmenschen versuchen, ganz still zu werden in seinem Innern und auf alle Zustimmung, namentlich alles abfällige Urteilen (Kritisieren, Ablehnen), auch in Gedanken und Gefühlen, zu verzichten."],
+   "vorsatz":"Dies ist die sogenannte","beiname":"«richtige Meinung».","zusatz":"",
+   "anregung":{"taetigkeit":"Die Woche still überblicken; aufräumen und Ordnung schaffen.","essen":"Mais: Polenta, Maisbrot, Maissuppe"}},
+  {"id":"sonntag","wochentag":0,"name":"Sonntag","planet":"Sonne","zeichen":"☉","metall":"Gold","getreide":"Weizen","vokal":"AU","farbe":"#9a7b2f","thema":"Entschlüsse",
+   "text":["Nur aus begründeter voller Überlegung heraus selbst zu dem Unbedeutendsten sich entschließen. Alles gedankenlose Handeln, alles bedeutungslose Tun soll von der Seele ferngehalten werden. Zu allem soll man stets wohlerwogene Gründe haben. Und man soll unbedingt unterlassen, wozu kein bedeutsamer Grund drängt.","Ist man von der Richtigkeit eines gefaßten Entschlusses überzeugt, so soll auch daran festgehalten werden in innerer Standhaftigkeit."],
+   "vorsatz":"Dies ist das sogenannte","beiname":"«richtige Urteil»,","zusatz":"das nicht von Sympathie und Antipathie abhängig gemacht wird.",
+   "anregung":{"taetigkeit":"Muße und Feier; ein Gang bei Tageslicht; einen Entschluß für die Woche fassen.","essen":"Weizen: frisches Brot oder Hefezopf, am besten selbst gebacken"}},
+  {"id":"montag","wochentag":1,"name":"Montag","planet":"Mond","zeichen":"☽","metall":"Silber","getreide":"Reis","vokal":"EI","farbe":"#3d7a4a","thema":"Das Reden",
+   "text":["Das Reden. Nur was Sinn und Bedeutung hat, soll von den Lippen desjenigen kommen, der eine höhere Entwickelung anstrebt. Alles Reden um des Redens willen - zum Beispiel zum Zeitvertreib - ist in diesem Sinne schädlich.","Die gewöhnliche Art der Unterhaltung, wo alles bunt durcheinander geredet wird, soll vermieden werden; dabei darf man sich nicht etwa ausschließen vom Verkehr mit seinen Mitmenschen. Gerade im Verkehr soll das Reden nach und nach zur Bedeutsamkeit sich entwickeln. Man steht jedem Rede und Antwort, doch gedankenvoll, nach jeder Richtung hin überlegt. Niemals ohne Grund reden! Gerne schweigen. Man versuche, nicht zu viel und nicht zu wenig Worte zu machen. Zuerst ruhig hinhören und dann verarbeiten."],
+   "vorsatz":"Man heißt diese Übung auch:","beiname":"«das richtige Wort».","zusatz":"",
+   "anregung":{"taetigkeit":"Ein Gespräch bewußt führen, zuerst zuhören; Zeiten des Schweigens einplanen.","essen":"Reis: Milchreis, Reisbrei, Gemüsereis"}},
+  {"id":"dienstag","wochentag":2,"name":"Dienstag","planet":"Mars","zeichen":"♂","metall":"Eisen","getreide":"Gerste","vokal":"E","farbe":"#c0392b","thema":"Die äußeren Handlungen",
+   "text":["Die äußeren Handlungen. Diese sollen nicht störend sein für unsere Mitmenschen. Wo man durch sein Inneres (Gewissen) veranlaßt wird zu handeln, sorgfältig erwägen, wie man der Veranlassung für das Wohl des Ganzen, das dauernde Glück der Mitmenschen, das Ewige, am besten entsprechen könne.","Wo man aus sich heraus handelt - aus eigener Initiative -, die Wirkungen seiner Handlungsweise im voraus auf das Gründlichste erwägen."],
+   "vorsatz":"Man nennt das auch","beiname":"«die richtige Tat».","zusatz":"",
+   "anregung":{"taetigkeit":"Etwas Handfestes tun: werken, reparieren, Bewegung; vor dem Handeln innehalten.","essen":"Gerste: Graupensuppe, Gerstenbrei"}},
+  {"id":"mittwoch","wochentag":3,"name":"Mittwoch","planet":"Merkur","zeichen":"☿","metall":"Quecksilber","getreide":"Hirse","vokal":"I","farbe":"#a68a00","thema":"Die Einrichtung des Lebens",
+   "text":["Die Einrichtung des Lebens. Natur- und geistgemäß leben, nicht im äußeren Tand des Lebens aufgehen. Alles vermeiden, was Unruhe und Hast ins Leben bringt.","Nichts überhasten, aber auch nicht träge sein. Das Leben als ein Mittel zur Arbeit, zur Höherentwickelung betrachten und demgemäß handeln."],
+   "vorsatz":"Man spricht in dieser Beziehung auch vom","beiname":"«richtigen Standpunkt».","zusatz":"",
+   "anregung":{"taetigkeit":"Den Tagesablauf ordnen, Hast herausnehmen; Briefe und Besorgungen in Ruhe erledigen.","essen":"Hirse: Hirsebrei, Hirsebratlinge"}},
+  {"id":"donnerstag","wochentag":4,"name":"Donnerstag","planet":"Jupiter","zeichen":"♃","metall":"Zinn","getreide":"Roggen","vokal":"O","farbe":"#6a4fa8","thema":"Das menschliche Streben",
+   "text":["Das menschliche Streben. Man achte darauf, nichts zu tun, was außerhalb seiner Kräfte liegt, aber auch nichts zu unterlassen, was innerhalb derselben sich befindet.","Über das Alltägliche, Augenblickliche hinausblicken und sich Ziele (Ideale) stellen, die mit den höchsten Pflichten eines Menschen zusammenhängen, zum Beispiel deshalb im Sinne der angegebenen Übungen sich entwickeln wollen, um seinen Mitmenschen nachher um so mehr helfen und raten zu können, wenn vielleicht auch nicht gerade in der allernächsten Zukunft."],
+   "vorsatz":"Man kann das Gesagte auch zusammenfassen in:","beiname":"«Alle vorangegangenen Übungen zur Gewohnheit werden lassen»","zusatz":"",
+   "anregung":{"taetigkeit":"Ziele und Ideale bedenken; die Übungen der Woche zusammenschauen.","essen":"Roggen: dunkles Roggenbrot, Roggenflocken"}},
+  {"id":"freitag","wochentag":5,"name":"Freitag","planet":"Venus","zeichen":"♀","metall":"Kupfer","getreide":"Hafer","vokal":"A","farbe":"#c8621e","thema":"Das Lernen",
+   "text":["Das Streben, möglichst viel vom Leben zu lernen.","Nichts geht an uns vorüber, das nicht Anlaß gibt, Erfahrungen zu sammeln, die nützlich sind für das Leben. Hat man etwas unrichtig oder unvollkommen getan, so wird das ein Anlaß, ähnliches später richtig oder vollkommen zu machen.","Sieht man andere handeln, so beobachtet man sie zu einem ähnlichen Ziele (doch nicht mit lieblosen Blicken). Und man tut nichts, ohne auf Erlebnisse zurückzublicken, die einem eine Hilfe sein können bei seinen Entscheidungen und Verrichtungen.","Man kann von jedem Menschen, auch von Kindern, viel lernen, wenn man aufpaßt."],
+   "vorsatz":"Man nennt diese Übung auch","beiname":"«das richtige Gedächtnis»","zusatz":"das heißt sich erinnern an das Gelernte, an die gemachten Erfahrungen.",
+   "anregung":{"taetigkeit":"Auf die Woche zurückblicken: Was habe ich gelernt? Etwas Schönes pflegen: Musik, Malen, Blumen.","essen":"Hafer: Haferbrei, Haferflockenplätzchen"}}
+ ],
+ "selbstbesinnung": {
+  "id":"selbstbesinnung","name":"Selbstbesinnung","zeichen":"✦","thema":"Die achte Übung · täglich","farbe":"#7a6a4f",
+  "text":["Von Zeit zu Zeit Blicke in sein Inneres tun, wenn auch nur fünf Minuten täglich zur selben Zeit. Dabei soll man sich in sich selbst versenken, sorgsam mit sich zu Rate gehen, seine Lebensgrundsätze prüfen und bilden, seine Kenntnisse - oder auch das Gegenteil - in Gedanken durchlaufen, seine Pflichten erwägen, über den Inhalt und den wahren Zweck des Lebens nachdenken, über seine eigenen Fehler und Unvollkommenheiten ein ernstliches Mißfallen haben, mit einem Wort: das Wesentliche, das Bleibende herauszufinden trachten und sich entsprechende Ziele, zum Beispiel zu erwerbende Tugenden, ernsthaft vornehmen. (Nicht in den Fehler verfallen und denken, man hätte irgend etwas gut gemacht, sondern immer weiter streben, den höchsten Vorbildern nach.)"],
+  "vorsatz":"Man nennt diese Übung auch","beiname":"«die richtige Beschaulichkeit».","zusatz":""
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "hinweis": "Kleine, gesicherte Auswahl. Weitere Einträge lassen sich einfach in dieser Datei ergänzen.",
+ "feste": [
+  {"monat":3,"tag":21,"titel":"Frühlingsbeginn","text":"Um den 21. März beginnt der Widder, die erste Monatstugend (Devotion) und der Frühling. Die Tage um die Tag-und-Nachtgleiche kehren das Jahr nach außen.","art":"Jahreslauf"},
+  {"monat":6,"tag":24,"titel":"Johanni","text":"Johannistag, Sommermitte. Die Sonne steht am höchsten. Der Seelenkalender hat in dieser Woche den Spruch 12.","art":"Jahresfest"},
+  {"monat":9,"tag":7,"jahr":1919,"titel":"Erste Waldorfschule","text":"Am 7. September 1919 wurde in Stuttgart die erste Freie Waldorfschule eröffnet.","art":"Jahrestag"},
+  {"monat":9,"tag":29,"titel":"Michaeli","text":"Michaeli, Fest des Erzengels Michael. Der Seelenkalender hat in dieser Woche den Spruch 26, den Michaeli-Spruch.","art":"Jahresfest"},
+  {"monat":12,"tag":21,"titel":"Wintersonnenwende","text":"Um den 21. Dezember beginnt der Steinbock (Mut). Längste Nacht, innerer Wendepunkt des Jahres.","art":"Jahreslauf"},
+  {"monat":12,"tag":24,"jahr":1923,"titel":"Weihnachtstagung","text":"Am 24. Dezember 1923 begann in Dornach die Weihnachtstagung, auf der die Allgemeine Anthroposophische Gesellschaft neu begründet wurde.","art":"Jahrestag"},
+  {"monat":12,"tag":25,"titel":"Weihnachten","text":"Weihnachten. Der Seelenkalender hat in dieser Woche den Spruch 38.","art":"Jahresfest"},
+  {"monat":2,"tag":27,"jahr":1861,"titel":"Rudolf Steiners Geburtstag","text":"Rudolf Steiner wurde am 27. Februar 1861 in Kraljevec geboren.","art":"Jahrestag"},
+  {"monat":3,"tag":30,"jahr":1925,"titel":"Rudolf Steiners Todestag","text":"Rudolf Steiner starb am 30. März 1925 in Dornach.","art":"Jahrestag"}
+ ],
+ "bewegliche": [
+  {"name":"Karfreitag","offset":-2,"text":"Karfreitag. Der Spruch 52 des Seelenkalenders liegt in der Karwoche."},
+  {"name":"Ostersonntag","offset":0,"text":"Ostersonntag. Das Seelenjahr beginnt mit Spruch 1."},
+  {"name":"Christi Himmelfahrt","offset":39,"text":"Christi Himmelfahrt, 39 Tage nach Ostern."},
+  {"name":"Pfingstsonntag","offset":49,"text":"Pfingsten, 49 Tage nach Ostern."}
+ ]
+}

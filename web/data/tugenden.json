@@ -1,0 +1,19 @@
+{
+ "quelle": "Rudolf Steiner, Die zwölf zu meditierenden und im Leben zu berücksichtigenden Tugenden (Seelenübungen I, GA 267). Die Zuordnung zum Tierkreis wird nach Angabe der Herausgeber auf H. P. Blavatsky zurückgeführt.",
+ "regel": "Immer mit dem Üben anfangen um den 21. des vorigen Monats bis zum übernächsten 1., zum Beispiel: Devotion vom 21. März bis 1. Mai usw.",
+ "tugenden": [
+  {"zeichen":"♈","tier":"Widder","monat":3,"tugend":"Devotion","variante":"(Ehrfurcht)","wird":"Opferkraft","farbe":"#c9707a"},
+  {"zeichen":"♉","tier":"Stier","monat":4,"tugend":"Gleichgewicht","variante":"((Inneres) Gleichgewicht)","wird":"Fortschritt","farbe":"#c7a27c"},
+  {"zeichen":"♊","tier":"Zwillinge","monat":5,"tugend":"Ausdauer","variante":"(Durchhaltekraft, Standhaftigkeit)","wird":"Treue","farbe":"#c9c76a"},
+  {"zeichen":"♋","tier":"Krebs","monat":6,"tugend":"Selbstlosigkeit","variante":"","wird":"Katharsis","farbe":"#8fc77a"},
+  {"zeichen":"♌","tier":"Löwe","monat":7,"tugend":"Mitleid","variante":"","wird":"Freiheit","farbe":"#6fc79a"},
+  {"zeichen":"♍","tier":"Jungfrau","monat":8,"tugend":"Höflichkeit","variante":"","wird":"Herzenstakt","farbe":"#6fc7b5"},
+  {"zeichen":"♎","tier":"Waage","monat":9,"tugend":"Zufriedenheit","variante":"","wird":"Gelassenheit","farbe":"#6fc2c7"},
+  {"zeichen":"♏","tier":"Skorpion","monat":10,"tugend":"Geduld","variante":"","wird":"Einsicht","farbe":"#7aa3c7"},
+  {"zeichen":"♐","tier":"Schütze","monat":11,"tugend":"Gedankenkontrolle","variante":"(Kontrolle der Sprache, Beherrschung der Zunge, «Hüte deine Zunge»)","wird":"Wahrheitsempfinden","farbe":"#7a7ac7"},
+  {"zeichen":"♑","tier":"Steinbock","monat":12,"tugend":"Mut","variante":"","wird":"Erlöserkraft","farbe":"#a07ac7"},
+  {"zeichen":"♒","tier":"Wassermann","monat":1,"tugend":"Diskretion","variante":"(Verschwiegenheit)","wird":"Meditationskraft","farbe":"#c77ae0"},
+  {"zeichen":"♓","tier":"Fische","monat":2,"tugend":"Großmut","variante":"","wird":"Liebe","farbe":"#d68ab0"}
+ ],
+ "hinweis": "Die Farben des Rades sind ein freier Farbkreis der App, keine Zuordnung von Steiner. Alle Wechsel liegen hier auf dem 21.; die astronomischen Tierkreisdaten weichen um ein bis zwei Tage ab."
+}
