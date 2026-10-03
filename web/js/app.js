@@ -7,6 +7,8 @@ const D = {};
 const ui = { jahrAnsicht: "rad", gewMonat: null, seelenStart: null, uebenTab: "tag" };
 const REIHENFOLGE = ["samstag", "sonntag", "montag", "dienstag", "mittwoch", "donnerstag", "freitag"];
 
+const lsGet = (k) => { try { return localStorage.getItem(k); } catch { return null; } };
+const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch { /* ignorieren */ } };
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const fmt = (o) => new Intl.DateTimeFormat("de-DE", { timeZone: "UTC", ...o });
 const fLang = fmt({ weekday: "long", day: "numeric", month: "long", year: "numeric" });
@@ -106,7 +108,7 @@ function tugendKarte(dt) {
     return `<div style="margin-top:8px"><h3>${t.tugend} <span class="klein">wird zu</span> ${t.wird}</h3>
       <div class="klein">${t.tier}${t.variante ? " · " + esc(t.variante) : ""} · üben vom ${fTagMon.format(a.start)} bis ${fTagMon.format(a.end)}${a.monat === aktuell ? "" : " (klingt aus)"}</div></div>`;
   }).join("")}
-  <div class="reihe"><a class="knopf" href="#/jahr">Zum Jahresrad</a></div></section>`;
+  <div class="reihe"><a class="knopf" href="#jahr">Zum Jahresrad</a></div></section>`;
 }
 
 function nebenKarte(dt) {
@@ -119,7 +121,7 @@ function nebenKarte(dt) {
   return `<section class="karte"><div class="kopfzeile"><span class="kicker">Nebenübung ${u.nr} von 6</span>${tag ? `<span class="klein">Tag ${tag}</span>` : ""}</div>
     <h3>${u.name}</h3>
     ${reif ? `<div class="hinweisbox">Du übst seit über einem Monat. Zeit für die nächste Übung: ${D.neben.uebungen[n.aktuell].name}.</div>` : ""}
-    <div class="reihe"><a class="knopf" href="#/ueben" data-a="zu-neben">Übungsweg öffnen</a></div></section>`;
+    <div class="reihe"><a class="knopf" href="#ueben" data-a="zu-neben">Übungsweg öffnen</a></div></section>`;
 }
 
 function rueckKarte(dt) {
@@ -256,7 +258,7 @@ function ansichtEinstellungen() {
   const s = S.get().erinnerung;
   const perm = "Notification" in window ? Notification.permission : "nicht verfügbar";
   const zeilen = [["rueckschau", "Rückschau am Abend"], ["besinnung", "Selbstbesinnung (5 Minuten)"], ["tag", "Tagesübung am Morgen"]];
-  const theme = localStorage.getItem("atrorhym.theme") || "system";
+  const theme = lsGet("atrorhym.theme") || "system";
   return `<h2 style="margin:6px 0 12px">Einstellungen</h2>
   <section class="karte"><div class="kicker">Erinnerungen</div>
     ${zeilen.map(([k, n]) => `<div class="einstellung"><label class="zeile"><span>${n}</span><input type="checkbox" data-a="erinn-an" data-k="${k}" ${s[k].an ? "checked" : ""}></label>
@@ -276,7 +278,7 @@ function ansichtEinstellungen() {
 
 /* ---------- Rendern ---------- */
 const ROUTEN = { heute: ansichtHeute, jahr: ansichtJahr, ueben: ansichtUeben, lesen: ansichtLesen, einstellungen: ansichtEinstellungen };
-function route() { return (location.hash.replace(/^#\//, "") || "heute").split("?")[0]; }
+function route() { return location.hash.replace(/^#\/?/, "") || "heute"; }
 
 function render(scroll = false) {
   const r = ROUTEN[route()] ? route() : "heute";
@@ -370,7 +372,8 @@ document.addEventListener("click", async (e) => {
       download(`seelenkalender-${sj}-${sj + 1}.ics`, spruecheIcs(D.seelenkalender, sj, sj), "text/calendar"); break;
     }
     case "export": download("rhythmen-stand.json", S.exportJson(), "application/json"); break;
-    case "reset": if (confirm("Wirklich alle deine Eingaben auf diesem Gerät löschen?")) { localStorage.removeItem("atrorhym.v1"); location.reload(); } break;
+    case "reset": dialog(`<h3>Alles löschen?</h3><p>Deine Übung, Startdaten und Rückschau-Einträge auf diesem Gerät werden entfernt.</p><div class="reihe"><button class="knopf voll" data-a="reset-ja">Ja, löschen</button><button class="knopf leise" data-a="zu">Abbrechen</button></div>`); break;
+    case "reset-ja": try { localStorage.removeItem("atrorhym.v1"); } catch { /* ignorieren */ } location.reload(); break;
   }
 });
 
@@ -382,7 +385,7 @@ document.addEventListener("change", async (e) => {
     scheduleReminders(); render();
   } else if (a === "erinn-zeit") { S.set((s) => { s.erinnerung[el.dataset.k].zeit = el.value || "21:30"; }); scheduleReminders(); }
   else if (a === "theme") {
-    localStorage.setItem("atrorhym.theme", el.value);
+    lsSet("atrorhym.theme", el.value);
     applyTheme();
   } else if (a === "import" && el.files[0]) {
     try { S.importJson(await el.files[0].text()); render(); toast("Wiederhergestellt"); } catch { toast("Datei konnte nicht gelesen werden"); }
@@ -390,7 +393,7 @@ document.addEventListener("change", async (e) => {
 });
 
 function applyTheme() {
-  const t = localStorage.getItem("atrorhym.theme");
+  const t = lsGet("atrorhym.theme");
   if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme;
 }
 
@@ -431,6 +434,6 @@ async function start() {
   window.addEventListener("hashchange", () => render(true));
   document.addEventListener("visibilitychange", () => { if (!document.hidden) { render(); scheduleReminders(); } });
   render(); scheduleReminders();
-  if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+  try { if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {}); } catch { /* ohne Offline-Cache */ }
 }
 start();
