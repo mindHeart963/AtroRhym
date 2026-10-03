@@ -36,4 +36,4 @@ Das Seelenjahr beginnt mit dem Ostersonntag (Spruch 1). Die Sprüche 12, 26, 38 
 - Seelenkalender: Handschrift-Fassung 1912/13 nach anthroposophischer-seelenkalender.de (`tools/fetch_seelenkalender.py`).
 - Nebenübungen, Tage der Woche, Monatstugenden: Rudolf Steiner, Seelenübungen I (GA 267).
 - Rückschau: Die Geheimwissenschaft im Umriß (GA 13).
-- Hinweise unter „Anregung“ (Tätigkeiten, Essen) sind Vorschläge und stammen nicht von Steiner. Sie sind in der App so gekennzeichnet.
+- Hinweise unter „Anregung“ (Tätigkeiten) sind Vorschläge und stammen nicht von Steiner. Sie sind in der App so gekennzeichnet.

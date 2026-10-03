@@ -15,7 +15,7 @@ const module = (name, file) => {
 };
 
 const data = {};
-for (const f of ["seelenkalender", "tage", "tugenden", "nebenuebungen", "rueckschau", "aktuell", "quellen"]) data[f] = JSON.parse(read(`data/${f}.json`));
+for (const f of ["seelenkalender", "tage", "tugenden", "nebenuebungen", "rueckschau", "aktuell", "quellen", "erinnerungen"]) data[f] = JSON.parse(read(`data/${f}.json`));
 
 let app = read("js/app.js")
   .replace(/^import \* as (\w+) from "\.\/(\w+)\.js";\n/gm, (_, ns, m) => `const ${ns} = __${m};\n`)

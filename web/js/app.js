@@ -49,7 +49,7 @@ function beinameHtml(t) {
 function anregungHtml(t) {
   if (!t.anregung) return "";
   return `<div class="anregung"><span class="kicker">Anregung · nicht von Steiner</span>
-    <div><b>Tätigkeit:</b> ${t.anregung.taetigkeit}</div><div><b>Essen:</b> ${t.anregung.essen}</div></div>`;
+    <div>${t.anregung.taetigkeit}</div></div>`;
 }
 
 function tagKarte(dt) {
@@ -59,6 +59,7 @@ function tagKarte(dt) {
     <h2>${t.thema}</h2>
     <div class="meta"><span>${t.zeichen} ${t.planet}</span><span>${t.metall}</span><span>${t.getreide}</span></div>
     ${absatz(t.text)}${beinameHtml(t)}${anregungHtml(t)}
+    <div class="reihe">${S.get().fokus && S.get().fokus.id === t.id ? `<span class="klein">✓ Das ist gerade deine Übung</span>` : `<button class="knopf" data-a="fokus-waehlen" data-id="${t.id}">Als meine Übung festlegen</button>`}</div>
   </section>`;
 }
 
@@ -251,20 +252,23 @@ function ansichtLesen() {
     ${quelle.werke.map((w) => `<div style="margin-top:8px"><b>${w.titel}</b> <span class="klein">(${w.ga})</span><div class="klein">${w.text}</div></div>`).join("")}
     <hr style="border:0;border-top:1px solid var(--linie);margin:14px 0">
     ${quelle.seiten.map((s) => `<div style="margin-top:6px"><a href="${s.url}" target="_blank" rel="noopener">${s.titel}</a><div class="klein">${s.text}</div></div>`).join("")}</section>
-  <div class="hinweisbox">Steiners Worte sind in dieser App als Zitate mit Quelle wiedergegeben. Unter „Anregung“ stehende Hinweise zu Tätigkeiten und Essen sind Vorschläge der App und stammen nicht von Steiner.</div>`;
+  <div class="hinweisbox">Steiners Worte sind in dieser App als Zitate mit Quelle wiedergegeben. Unter „Anregung“ stehende Hinweise zu Tätigkeiten sind Vorschläge der App und stammen nicht von Steiner.</div>`;
 }
 
 function ansichtEinstellungen() {
   const s = S.get().erinnerung;
   const perm = "Notification" in window ? Notification.permission : "nicht verfügbar";
-  const zeilen = [["rueckschau", "Rückschau am Abend"], ["besinnung", "Selbstbesinnung (5 Minuten)"], ["tag", "Tagesübung am Morgen"]];
   const theme = lsGet("atrorhym.theme") || "system";
   return `<h2 style="margin:6px 0 12px">Einstellungen</h2>
   <section class="karte"><div class="kicker">Erinnerungen</div>
-    ${zeilen.map(([k, n]) => `<div class="einstellung"><label class="zeile"><span>${n}</span><input type="checkbox" data-a="erinn-an" data-k="${k}" ${s[k].an ? "checked" : ""}></label>
-      <label class="zeile"><span class="klein">Uhrzeit</span><input type="time" data-a="erinn-zeit" data-k="${k}" value="${s[k].zeit}"></label></div>`).join("")}
-    <p class="klein">Benachrichtigungen: ${perm === "granted" ? "erlaubt" : perm === "denied" ? "blockiert (im Browser freigeben)" : perm === "default" ? "noch nicht erlaubt" : perm}.
-    Im Browser kommen sie nur, solange die App geöffnet ist. Für feste Erinnerungen lade die Kalenderdatei und füge sie deinem Kalender hinzu.</p>
+    <p style="margin-top:8px">${D.erinn.einleitung}</p>
+    ${D.erinn.eintraege.map((e) => `<div class="einstellung"><label class="zeile"><span>${e.titel}</span><input type="checkbox" data-a="erinn-an" data-k="${e.id}" ${s[e.id].an ? "checked" : ""}></label>
+      <label class="zeile"><span class="klein">Uhrzeit (Vorschlag ${e.vorschlag})</span><input type="time" data-a="erinn-zeit" data-k="${e.id}" value="${s[e.id].zeit}"></label>
+      <details><summary>Wann, warum und wie?</summary>
+        <p><b>Wann.</b> ${e.wann}</p><p><b>Warum.</b> ${e.warum}</p><p><b>Wie.</b> ${e.wie}</p>
+        <p class="klein"><b>Bei Steiner:</b> ${e.steiner}</p></details></div>`).join("")}
+    <p class="klein">${D.erinn.technik}</p>
+    <p class="klein">Benachrichtigungen: ${perm === "granted" ? "erlaubt" : perm === "denied" ? "im Browser blockiert, bitte dort freigeben" : perm === "default" ? "noch nicht erlaubt" : perm}.</p>
     <div class="reihe"><button class="knopf" data-a="erinn-erlauben">Benachrichtigungen erlauben</button>
     <button class="knopf" data-a="ics-erinn">Erinnerungen als Kalenderdatei</button></div></section>
   <section class="karte"><div class="kicker">Darstellung</div>
@@ -424,7 +428,7 @@ function scheduleReminders() {
 /* ---------- Start ---------- */
 async function start() {
   applyTheme();
-  const dateien = { seelenkalender: "seelenkalender", tage: "tage", tugenden: "tugenden", neben: "nebenuebungen", rueck: "rueckschau", aktuell: "aktuell", quellen: "quellen" };
+  const dateien = { seelenkalender: "seelenkalender", tage: "tage", tugenden: "tugenden", neben: "nebenuebungen", rueck: "rueckschau", aktuell: "aktuell", quellen: "quellen", erinn: "erinnerungen" };
   try {
     await Promise.all(Object.entries(dateien).map(async ([k, f]) => { D[k] = await (await fetch(`data/${f}.json`)).json(); }));
   } catch {

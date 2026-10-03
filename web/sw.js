@@ -2,7 +2,7 @@
 const VERSION = "v1";
 const KERN = ["./", "index.html", "css/style.css", "js/app.js", "js/calc.js", "js/store.js", "js/wheel.js", "js/ics.js",
   "manifest.webmanifest", "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png",
-  ...["seelenkalender", "tage", "tugenden", "nebenuebungen", "rueckschau", "aktuell", "quellen"].map((n) => `data/${n}.json`)];
+  ...["seelenkalender", "tage", "tugenden", "nebenuebungen", "rueckschau", "aktuell", "quellen", "erinnerungen"].map((n) => `data/${n}.json`)];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(VERSION).then((c) => c.addAll(KERN)).then(() => self.skipWaiting()));

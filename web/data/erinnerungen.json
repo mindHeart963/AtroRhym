@@ -1,0 +1,21 @@
+{
+ "einleitung": "Alle drei Übungen leben von Regelmäßigkeit. Bei der Selbstbesinnung nennt Steiner es ausdrücklich: täglich, zur selben Zeit. Eine feste Erinnerung nimmt dir die Entscheidung ab, wann du übst, und macht die Übung mit der Zeit zur Gewohnheit. Uhrzeiten nennt Steiner in den hier verwendeten Texten nicht. Die Vorschläge unten stammen von der App, du kannst sie frei ändern.",
+ "technik": "Benachrichtigungen erscheinen im Browser nur, solange die App geöffnet ist. Zuverlässig, auch bei geschlossener App, kommt die Erinnerung über die Kalenderdatei: Du lädst sie einmal herunter und öffnest sie mit deinem Kalender, dort wiederholt sie sich täglich.",
+ "eintraege": [
+  {"id":"rueckschau","titel":"Rückschau am Abend","vorschlag":"21:30",
+   "steiner":"Täglich «nach vollbrachtem Tagewerk» (Die Geheimwissenschaft im Umriß, GA 13).",
+   "wann":"Vorschlag: 21:30 Uhr, etwa eine halbe Stunde vor dem Schlafengehen. Der Tag ist noch frisch, und es steht nichts mehr an.",
+   "warum":"Die Rückschau übt ein Vorstellen, das sich vom Lauf der Ereignisse löst und den Tag rückwärts gestaltet. Das wächst nur durch tägliches Wiederholen, und gerade am Abend ist man leicht zu müde oder zu zerstreut, um daran zu denken.",
+   "wie":"Die Erinnerung ruft dich nur zur Übung. Die Rückschau selbst machst du still: den Tag vom Abend zum Morgen als Bilder vorüberziehen lassen, ohne zu urteilen. Beginne mit kleinen Abschnitten."},
+  {"id":"besinnung","titel":"Selbstbesinnung, fünf Minuten","vorschlag":"07:00",
+   "steiner":"«Wenn auch nur fünf Minuten täglich zur selben Zeit», die achte Übung (Seelenübungen I, GA 267). Eine Tageszeit nennt Steiner nicht.",
+   "wann":"Vorschlag: 07:00 Uhr, vor dem Beginn des Tages. Wichtiger als die Uhrzeit ist, dass du sie jeden Tag halten kannst.",
+   "warum":"Die Selbstbesinnung ist die Übung, die alle anderen trägt. Steiner beschreibt, dass man dabei seine Lebensgrundsätze prüft, sein Wesentliches sucht und sich Ziele vornimmt. Nur eine feste Zeit sorgt dafür, dass das nicht immer wieder verschoben wird.",
+   "wie":"Setz dich fünf Minuten still hin, geh mit dir zu Rate und frage nach dem Wesentlichen und Bleibenden. Mehr braucht es nicht."},
+  {"id":"tag","titel":"Tagesübung am Morgen","vorschlag":"08:00",
+   "steiner":"Jeder Wochentag hat seine Übung, und der Mensch soll auf Seelenvorgänge «Aufmerksamkeit und Sorgfalt» verwenden, die er sonst «sorglos und unaufmerksam» ausführt (GA 267). Eine Tageszeit nennt Steiner nicht.",
+   "wann":"Vorschlag: 08:00 Uhr, damit du die Übung des Tages in den Tag mitnehmen kannst.",
+   "warum":"Eine Übung, an die du erst abends denkst, hat den Tag nicht begleitet. Am Morgen erinnert, kannst du im Lauf des Tages immer wieder darauf achten, zum Beispiel am Montag auf das Reden.",
+   "wie":"Die Benachrichtigung nennt dir Wochentag und Thema. Lies bei Bedarf den ganzen Text auf der Startseite."}
+ ]
+}

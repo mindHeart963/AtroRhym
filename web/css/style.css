@@ -173,3 +173,22 @@ input[type="checkbox"] { width: 22px; height: 22px; accent-color: var(--akzent);
 @media (min-width: 700px) { body { font-size: 20px; } main { padding-top: 16px; } }
 @media (prefers-reduced-motion: no-preference) { .karte { transition: box-shadow .2s; } }
 @media print { .tabs, .kopf { display: none; } }
+
+/* Mittige Anordnung: Titel, kurze Texte, Verse und Knöpfe zentriert; lange Lesetexte bleiben linksbündig */
+.hero { text-align: center; }
+.karte, dialog { text-align: center; }
+.karte .kopfzeile { flex-direction: column; align-items: center; gap: 2px; }
+.karte .kopfzeile .vokal { order: 3; margin-top: 2px; }
+.karte .meta, .reihe, .punkte { justify-content: center; }
+.karte p { text-wrap: pretty; }
+.hinweisbox { border-left: 0; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); background: transparent; text-align: center; padding: 10px 12px; }
+.stufe { grid-template-columns: 1fr; gap: 2px; justify-items: center; }
+.stufe .zahl { font-size: 1.8rem; }
+.stufe > div { width: 100%; }
+.volltext, .volltext p, .volltext h3 { text-align: left; }
+.volltext h3 { text-align: center; }
+details > summary { text-align: center; }
+.einstellung, label.zeile, .liste, .liste li > button, .jahrwahl .titel { text-align: left; }
+.jahrwahl .titel { text-align: center; }
+.einstellung details p { text-align: left; }
+.toast { text-align: center; }
